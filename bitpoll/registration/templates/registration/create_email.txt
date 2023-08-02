@@ -1,0 +1,11 @@
+{% load i18n %}{% load settings_value %}{% value_from_settings MAIL_SIGNATURE as signature %}{% autoescape off %}{% blocktrans %}
+Hi,
+
+Here is your account creation link:
+    {{ activation_link }}
+
+Greetings,
+
+Your {{ signature }}
+{% endblocktrans %}{% endautoescape %}
+

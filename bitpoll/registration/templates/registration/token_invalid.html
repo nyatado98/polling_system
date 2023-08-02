@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block wtitle %}{% block ptitle %}{% trans "Invalid token" %}{% endblock %}{% endblock %}
+
+{% block content %}
+    <section class="section">
+        <div class="container">
+            <p>{% trans "Sorry, but the provided token is invalid." %}</p>
+        </div>
+    </section>
+{% endblock content %}

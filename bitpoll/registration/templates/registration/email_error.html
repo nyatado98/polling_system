@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <section class="section">
+        <div class="container">
+            <h2>{% trans "Email address is invalid" %}</h2>
+
+            <p>{% trans "The mailserver said:" %} {{ error_code }}: {{ error_msg }}</p>
+        </div>
+    </section>
+{% endblock content %}

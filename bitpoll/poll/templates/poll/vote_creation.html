@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load poll_filter %}
+{% load widget_tweaks %}
+{% block css %}
+    {% include "poll/choice_style.html" %}
+{% endblock %}
+{% block title %}Vote on {{ poll.title }}{% endblock %}
+
+{% block content %}
+    {% include 'poll/poll_header.html' %}
+    <div class="container">
+    {% if timezone_warning %}
+      <p class="alert alert-warning">
+      {% blocktrans %}
+      This poll has a different timezone than you.
+      {% endblocktrans %}
+      </p>
+    {% endif %}
+
+        <ul class="help-list script-only">
+          <li>{% trans 'Hold left mouse button and drag mouse to select multiple vote choices.' %}</li>
+        </ul>
+        {% if current_vote.pk %}
+            <form action="{% url 'poll_voteEdit' poll.url current_vote.pk %}" method="POST" class="form-inline">
+        {% else %}
+        <form action="{% url 'poll_vote' poll.url %}" method="POST" class="form-inline">
+        {% endif %}
+            {% csrf_token %}
+            <table class="table poll vote auto-width">
+                <tr class="vote-header">
+                    <td colspan="{{ matrix_len }}"></td>
+                    {% for value in values %}
+                        <td class="vote-header text-center">
+                            <span class="vote-header">{{ value.title }}</span>
+                        </td>
+                    {% endfor %}
+                </tr>
+                <tr class="script-only">
+                    <td colspan="{{ matrix_len }}"></td>
+                    {% for value in values %}
+                        <td class="text-center vote-header">
+                            <input value="all" data-choice="{{ value.id }}" class="action small vote-choice-column" type="button">
+                        </td>
+                    {% endfor %}
+                </tr>
+                {% for row, choice, comment, vote, events in choices_matrix %}
+                    <tr class="vote">
+                        {% for item in row %}
+                            {% if item.0 != None %}
+                                <td class="choice-group" colspan="{{ item.1 }}" rowspan="{{ item.2 }}">
+                                    {{ item.0|group_title }}
+                                </td>
+                            {% endif %}
+                        {% endfor %}
+                        {% for value in values %}
+                            <td class="vote-choice control bg-{{ value.color }}" title="{{ value.title }}">
+                            <input type="radio" id="{{ choice.id }}_{{ value.id }}" value="{{ value.id }}" name="{{ choice.id }}" title=""
+                                    {% if value == vote %} checked {% endif %}
+                                />
+                                <label for="{{ choice.id }}_{{ value.id }}" class="fa-solid fa-{{ value.icon }}"></label>
+                            </td>
+                        {% endfor %}
+                        <td class="vote-comment">
+                            <div class="script-only">
+                                <button class="btn btn-sm btn-default vote-choice-edit"
+                                        title="{{ _('Add a comment') }}"><i
+                                        class="fa-solid fa-comment-o"></i></button>
+                            </div>
+                            <input type="text" class="vote-choice-comment form-control" name="comment_{{ choice.id }}" title=""
+                                   value="{{ comment }}"/>
+                        </td>
+                        <td>
+                            {% for event in events %}
+                                <span class="label label-info">{{ event.DTSTART }} - {{ event.DTEND }}: <b>{{ event.NAME }}</b></span>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="{{ matrix_len|add:choices_matrix_len }}">
+                        <hr/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="{{ matrix_len }}">
+                      <label for="name">{% trans 'Your name:' %}</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="text" name="name" title="{% trans 'Your name' %}"
+                                {% if request.user.is_authenticated %}
+                                    value="{{ request.user.get_displayname }}" readonly="readonly"
+                                {% elif current_vote.name %}
+                                    value="{{ current_vote.name }}" readonly="readonly"
+                                {%  endif %}
+                                maxlength="80"
+                                class="form-control" id="name"/>
+
+                        {% if poll.anonymous_allowed %}
+                            <br>
+                            <input type="checkbox" name="anonymous" id="anonymous"
+                                title="{% trans 'Post anonymous vote' %}" value="true"
+                                   {% if current_vote.anonymous %}
+                                        checked
+                                   {% endif %}
+                            />
+                            <label for="anonymous">{% trans 'Post anonymous vote' %}</label> <br/>
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="{{ matrix_len }}">
+                      <label for="comment">{% trans 'Comment:' %}</label>
+                      <span class="help-inline">{% trans '(optional)' %}</span>
+                    </td>
+                    <td colspan="4">
+                        <textarea title="Comment:" name="comment" class="form-control" id="comment" cols="40" rows="5">{{ current_vote.comment }}</textarea><br/>
+                </tr>
+                <tr>
+                    <td colspan="{{ matrix_len }}"></td>
+                    <td colspan="4">
+                        <button class="action primary block" type="submit" name="submit" value="Vote">
+                            <i class="fa-solid fa-check"></i>
+                            <span>{% trans 'Save vote' %}</span>
+                        </button>
+                    </td>
+                </tr>
+                {% if current_vote.pk %}
+                    <input type="hidden" name="vote_id" value="{{ current_vote.pk }}" >
+                {% endif %}
+            </table>
+        </form>
+      </div>
+
+{% endblock %}

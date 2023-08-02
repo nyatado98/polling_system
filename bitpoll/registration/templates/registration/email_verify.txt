@@ -1,0 +1,16 @@
+{% load i18n %}{% load settings_value %}{% autoescape off %}{% value_from_settings SITE_NAME as project_name%}{% value_from_settings MAIL_SIGNATURE as signature %}
+{% blocktrans %}Hi,
+
+you requested to associate the email address
+  {{ email }}
+with the {{ project_name }} account {{ username }}.
+
+If this is correct, please verify the address by following this link:
+  {{ link }}
+The link will be valid for 24 hours.
+
+
+Greetings,
+
+Your {{ signature }}
+{% endblocktrans %}{% endautoescape %}

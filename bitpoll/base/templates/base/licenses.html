@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block wtitle %}{% block ptitle %}{% trans "License information" %}{% endblock %}{% endblock %}
+
+{% block content %}
+<div class="container">
+<h2>BitPoll Licence Overview</h2>
+<p>
+The BitPoll project is free software and released under the
+<a href="https://tldrlegal.com/license/gnu-general-public-license-v3-%28gpl-3%29">
+GNU General Public License in version 3</a> or later. You can obtain a copy of the source
+code at our <a href="https://github.com/fsinfuhh/Bitpoll">GitHub project</a>.
+</p>
+<p>Authors:</p>
+<ul>
+	<li>Nils Rokita</li>
+	<li>Mareike Schmidt</li>
+	<li>Pascal Wichmann</li>
+	<li>Paul Bienkowski</li>
+</ul>
+
+<h3>Third party libraries</h3>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Library/component</th>
+			<th>Author/owner</th>
+			<th>License</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="https://www.djangoproject.com/">Django</a></td>
+			<td>Django Software Foundation and individual contributors</td>
+			<td><a href="https://www.tldrlegal.com/l/bsd3">BSD License (3-clause)</a></td>
+		</tr>
+		<tr>
+			<td><a href="http://jquery.com/">jQuery</a></td>
+			<td>jQuery Foundation, Inc. and other contributors</td>
+			<td><a href="https://tldrlegal.com/license/mit-license">MIT License</a></td>
+		</tr>
+		<tr>
+			<td><a href="http://getbootstrap.com/">Bootstrap CSS</a></td>
+			<td>Twitter Inc.</td>
+			<td><a href="https://tldrlegal.com/license/mit-license">MIT License</a></td>
+		</tr>
+		<tr>
+			<td><a href="http://www.python-ldap.org/">python-ldap</a></td>
+			<td>python-ldap project</td>
+			<td><a href="https://tldrlegal.com/license/python-license-2.0">Python</a> style</td>
+		</tr>
+		<tr>
+			<td><a href="https://github.com/kmike/django-widget-tweaks">django-widget-tweaks</a></td>
+			<td>Mikhail Korobov</td>
+			<td><a href="https://tldrlegal.com/license/mit-license">MIT License</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://github.com/getsentry/sentry-python">Sentry</a></td>
+			<td>Functional Software, Inc and <a href="https://github.com/getsentry/sentry-python/graphs/contributors">individual contributors</a></td>
+			<td><a href="https://www.tldrlegal.com/l/bsd3">BSD License (3-clause)</a></td>
+		</tr>
+		<tr>
+			<td><a href="https://pythonhosted.org/pytz/">pytz</a></td>
+			<td>Stuart Bishop</td>
+			<td><a href="https://tldrlegal.com/license/mit-license">MIT License</a></td>
+		</tr>
+		<tr>
+			<td><a href="http://xdsoft.net/jqplugins/datetimepicker/">DateTimePicker jQuery plugin</a></td>
+			<td>XDSoft</td>
+			<td><a href="https://tldrlegal.com/license/mit-license">MIT License</a></td>
+		</tr>
+        <tr>
+			<td><a href="https://github.com/sv0/django-markdown-app">django-markdown-app</a></td>
+			<td>Slavik Svyrydiuk</td>
+			<td><a href="https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)">GPL v3</a></td>
+		</tr>
+        <tr>
+            <td><a href="https://github.com/jazzband/django-pipeline">django-pipline</a></td>
+			<td>Andreas Pelme, Timothée Peignier</td>
+			<td><a href="https://tldrlegal.com/license/mit-license">MIT License</a></td>
+		</tr>
+        <tr>
+            <td><a href="https://github.com/sonic182/libsasscompiler">Libsasscompiler</a></td>
+			<td>Johanderson Mogollon</td>
+			<td><a href="https://tldrlegal.com/license/mit-license">MIT License</a></td>
+		</tr>
+        <tr>
+            <td><a href="https://github.com/fsinfuhh/django-simple-csp">django-simple-csp</a></td>
+			<td>Nils Rokita, Henning Pridöhl</td>
+			<td><a href="https://tldrlegal.com/license/mit-license">MIT License</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>Third-party assets</h3>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Asset</th>
+			<th>Author/owner</th>
+			<th>License</th>
+			<th>Remarks</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="http://glyphicons.com/">Glyphicons Halflings</a> (as part of Bootstrap)</td>
+			<td>Jan Kovařík</td>
+			<td>See bootstrap license</td>
+			<td>Some icons in buttons</td>
+		</tr>
+		<tr>
+			<td><a href="https://fontawesome.com/">Fontawesome</a></td>
+			<td>Fonticons, Inc.</td>
+			<td><a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL">SIL OFL 1.1</a></td>
+			<td>Font used in BitPoll</td>
+		</tr>
+		<tr>
+			<td><a href="https://www.google.com/get/noto/">Noto Color Emoji</a></td>
+			<td>Google Inc.</td>
+			<td><a href="https://tldrlegal.com/license/open-font-license-(ofl)-explained">SIL Open Font License v1.1 (OFL-1.1)</a></td>
+			<td>Font used in BitPoll</td>
+		</tr>
+		<tr>
+			<td><a href="https://github.com/google/roboto/">Roboto</a></td>
+			<td>Christian Robertson</td>
+			<td><a href="https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)">Apache License, Version 2.0</a></td>
+			<td>Font used in BitPoll</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+{% endblock %}
