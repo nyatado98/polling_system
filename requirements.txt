@@ -55,7 +55,6 @@ lxml==4.9.2
     # via caldav
 markdown==3.4.1
     # via django-markdownify
-psycopg2==2.9.6
 pycparser==2.21
     # via cffi
 python-dateutil==2.8.2
