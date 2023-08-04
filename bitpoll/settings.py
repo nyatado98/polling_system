@@ -40,7 +40,7 @@ STATIC_ROOT = os.path.join(ROOT_DIR, '_static')
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 TEMPLATE_ALLOWABLE_SETTINGS_VALUES = [
     'ALLOW_CUSTOM_SLUGS',
@@ -404,6 +404,3 @@ INSTALLED_APPS += INSTALLED_APPS_LOCAL
 PIPELINE.update(PIPELINE_LOCAL)
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bitpoll.settings")
-
-application = get_wsgi_application()
