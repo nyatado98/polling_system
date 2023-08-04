@@ -1,2 +1,2 @@
- python -m pip install -r requirements.txt
- python manage.py collectstatic --noinput --clear
+ -m pip install -r requirements.txt
+ pythom3.9 manage.py collectstatic --noinput --clear
