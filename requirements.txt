@@ -98,4 +98,4 @@ webencodings==0.5.1
     #   tinycss2
 x-wr-timezone==0.0.5
     # via recurring-ical-events
-psycopg2==2.9.6    
+   
