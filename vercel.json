@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "bitpoll/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "bitpoll/wsgi.py"
+      }
+    ]
+}
