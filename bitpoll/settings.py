@@ -402,3 +402,8 @@ from .settings_local import *
 
 INSTALLED_APPS += INSTALLED_APPS_LOCAL
 PIPELINE.update(PIPELINE_LOCAL)
+
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bitpoll.settings")
+
+application = get_wsgi_application()
