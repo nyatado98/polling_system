@@ -40,8 +40,7 @@ urlpatterns = [
 
 ]
 
-urlpatterns += static(settings.MEDIA_URL)
-urlpatterns += static(settings.STATIC_URL)
+
 
 
 if settings.CALENDAR_ENABLED:
