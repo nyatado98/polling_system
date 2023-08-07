@@ -35,7 +35,7 @@ MEDIA_URL = '/media/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 # STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = os.path.join(ROOT_DIR, '_static')
+STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
 # STATIC_ROOT = os.path.join(BASE_DIR, '_static', 'static')
 
 # URL prefix for static files.
