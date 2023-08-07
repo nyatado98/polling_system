@@ -1,0 +1,52 @@
+.slider {
+  width: 400px;
+  margin: 50px; }
+  .slider .bar {
+    position: relative;
+    border-bottom: 1px solid #DDD; }
+    .slider .bar .handle {
+      width: 10px;
+      height: 10px;
+      margin-left: -5px;
+      z-index: 10000;
+      display: block;
+      position: absolute;
+      background: #FFF;
+      border: 2px solid #08F;
+      bottom: 2px;
+      border-radius: 50% !important;
+      cursor: pointer;
+      transition: all 0.1s; }
+      .slider .bar .handle:after {
+        position: absolute;
+        left: 50%;
+        margin-left: -3px;
+        border: 3px solid transparent;
+        bottom: -7px;
+        border-top-color: #08F;
+        content: " "; }
+      .slider .bar .handle:hover, .slider .bar .handle.dragging {
+        width: 20px;
+        height: 20px;
+        margin-left: -10px;
+        border-width: 4px;
+        bottom: -10px; }
+        .slider .bar .handle:hover:after, .slider .bar .handle.dragging:after {
+          opacity: 0; }
+  .slider .ticks {
+    position: relative; }
+    .slider .ticks .tick {
+      position: absolute;
+      width: 100px;
+      text-align: center;
+      margin-left: -50px; }
+      .slider .ticks .tick .marker {
+        width: 1px;
+        height: 10px;
+        margin: 2px 0;
+        background: #DDD;
+        display: block;
+        margin: 0 auto; }
+      .slider .ticks .tick .text {
+        font-size: 8pt;
+        color: #AAA; }
