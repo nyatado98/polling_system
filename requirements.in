@@ -10,3 +10,6 @@ django-encrypted-model-fields
 caldav
 icalendar
 django-token-bucket>=0.2.2
+django-auth-ldap
+uwsgi
+psycopg2-binary
