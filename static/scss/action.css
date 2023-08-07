@@ -1,0 +1,92 @@
+.action {
+  background: #444444;
+  color: white;
+  font-family: "Roboto";
+  font-size: 14px;
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 2px;
+  text-align: center;
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .action {
+    background: #AAA;
+    box-shadow: 0 1px 0 #9d9d9d; }
+    .action:hover {
+      background: #dddddd;
+      box-shadow: 0 1px 0 #d0d0d0; }
+  .action.primary {
+    background: #09F;
+    box-shadow: 0 1px 0 #008ae6; }
+    .action.primary:hover {
+      background: #66c2ff;
+      box-shadow: 0 1px 0 #4db8ff; }
+  .action.secondary {
+    background: #444;
+    box-shadow: 0 1px 0 #373737; }
+    .action.secondary:hover {
+      background: #777777;
+      box-shadow: 0 1px 0 #6a6a6a; }
+  .action.danger {
+    background: #C20;
+    box-shadow: 0 1px 0 #b31e00; }
+    .action.danger:hover {
+      background: #ff5533;
+      box-shadow: 0 1px 0 #ff401a; }
+  .action.success {
+    background: #2A1;
+    box-shadow: 0 1px 0 #1d930f; }
+    .action.success:hover {
+      background: #4aeb36;
+      box-shadow: 0 1px 0 #35e91f; }
+  .action.text {
+    background: transparent;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0); }
+    .action.text:hover {
+      background: rgba(51, 51, 51, 0);
+      box-shadow: 0 1px 0 rgba(38, 38, 38, 0); }
+  .action:last-child {
+    margin-right: 0; }
+  .action.large {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.2em; }
+  .action.medium, .action {
+    padding: 0 16px;
+    height: 32px;
+    line-height: 32px; }
+  .action.small {
+    padding: 0 12px;
+    height: 24px;
+    line-height: 24px; }
+  .action.icon {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px; }
+    .action.icon span {
+      display: none; }
+  .action, .action:hover, .action:active, .action:focus {
+    color: white;
+    text-decoration: none;
+    outline: none; }
+  .action.text, .action.text:hover, .action.text:active, .action.text:focus {
+    text-shadow: none;
+    color: #666; }
+  .action.text:hover {
+    color: #888; }
+  .action i.fa-solid {
+    font-size: 14px; }
+  .action i.fa-solid + span,
+  .action span + i.fa-solid {
+    margin-left: 6px; }
+  .action.block {
+    display: block;
+    margin-bottom: 4px;
+    width: 100%;
+    box-sizing: border-box; }
