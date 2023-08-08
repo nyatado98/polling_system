@@ -20,6 +20,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %} - {{ site_name }}</title>
+    {% stylesheet 'base_screen' %}
+    {% stylesheet 'base' %}
+    {% stylesheet 'base_print' %}
+    {% javascript 'base' %}
     {% load static %}
 <link rel="stylesheet" href="{% static 'css/base_screen.css' %}">
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -38,7 +42,7 @@
 <div id="wrapper">
     <header id="header">
         <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container-fluid">
+            <div class="container-fluid bg-info">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
