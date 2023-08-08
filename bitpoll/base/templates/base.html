@@ -20,17 +20,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %} - {{ site_name }}</title>
-{% stylesheet 'base_screen' %}
-    {% stylesheet 'base' %}
-    {% stylesheet 'base_print' %}
-    {% javascript 'base' %}
+<link rel="stylesheet" href="{% static 'css/base_screen.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/base_print.css' %}">
     {% block css %}{%  endblock %}
     {% block headJS %}{% endblock %}
     <!-- templates/your_template.html -->
 
-<link rel="stylesheet" href="{% static '_static/css/base_screen.css' %}">
-<link rel="stylesheet" href="{% static '_static/css/base.css' %}">
-<link rel="stylesheet" href="{% static '_static/css/base_print.css' %}">
+
 
 
 <link rel="stylesheet" type="text/css" href="{% static 'scss/main.scss' %}">
