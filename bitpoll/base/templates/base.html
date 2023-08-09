@@ -22,9 +22,9 @@
     <title>{% block title %}{% endblock %} - {{ site_name }}</title>
     
     {% load static %}
-<link rel="stylesheet" href="{% static 'css/base_screen.css' %}">
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
-<link rel="stylesheet" href="{% static 'css/base_print.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/base_screen.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/base_print.css' %}">
     {% block css %}{%  endblock %}
     {% block headJS %}{% endblock %}
     <!-- templates/your_template.html -->
