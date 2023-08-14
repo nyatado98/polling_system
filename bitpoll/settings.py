@@ -34,18 +34,19 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATICFILES_DIRS = [
-os.path.join(BASE_DIR, "static"),
+# STATICFILES_DIRS = [
+# os.path.join(BASE_DIR, "static"),
 
-]
+# ]
 
+STATICFILES_DIRS = os.path.join(BASE_DIR, "static"),
 STATIC_ROOT = os.path.join(ROOT_DIR, 'stat')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', '.now.sh']
 
 TEMPLATE_ALLOWABLE_SETTINGS_VALUES = [
     'ALLOW_CUSTOM_SLUGS',

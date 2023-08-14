@@ -67,6 +67,9 @@ if url_prefix not in ('', '/', None):
         path(url_prefix, include(urlpatterns))
     ]
 
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 
 def handler500(request):
     """500 error handler which includes ``request`` in the context.
