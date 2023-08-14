@@ -30,7 +30,6 @@ MEDIA_ROOT = os.path.join(ROOT_DIR, '_media')
 # Examples: "http://example.com/media/", "http://media.example.com/"
 MEDIA_URL = '/media/'
 
-DEBUG = False
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
@@ -40,7 +39,7 @@ os.path.join(BASE_DIR, 'static'),
 
 ]
 
-STATIC_ROOT = os.path.join(ROOT_DIR, 'stat')
+STATIC_ROOT = os.path.join(BASE_DIR, 'stat')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
