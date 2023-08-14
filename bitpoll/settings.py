@@ -36,7 +36,7 @@ DEBUG = True
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 STATICFILES_DIRS = [
-os.path.join(BASE_DIR, 'static/'),
+os.path.join(BASE_DIR, 'static'),
 
 ]
 
