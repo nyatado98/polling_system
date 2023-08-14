@@ -39,7 +39,7 @@ MEDIA_URL = '/media/'
 
 # ]
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")] #added
 STATIC_ROOT = os.path.join(ROOT_DIR, 'stat')
 
 # URL prefix for static files.
