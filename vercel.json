@@ -1,5 +1,5 @@
 {
-  "version": 2,
+    "version": 2,
     "builds": [
       {
         "src": "bitpoll/wsgi.py",
@@ -10,7 +10,7 @@
       "src": "build.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "stat"
+        "distDir": "static-build"
       }
     }
     ],
