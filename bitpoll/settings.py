@@ -44,7 +44,7 @@ STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+STATIC_URL = '/'
 
 ALLOWED_HOSTS = ['*']
 
