@@ -23,6 +23,7 @@ import django.conf.urls.i18n
 
 from django.templatetags.static import static
 
+from django.base.static import static
 
 from bitpoll import settings
 
