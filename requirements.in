@@ -1,5 +1,7 @@
 django<4.1
 django-widget-tweaks
+django-auth-ldap
+sentry-sdk
 django-markdownify
 pytz
 django-simple-csp
