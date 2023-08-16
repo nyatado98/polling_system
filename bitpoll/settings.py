@@ -42,6 +42,10 @@ MEDIA_URL = '/media/'
 
 STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
 
+# settings.py
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
@@ -108,6 +112,7 @@ MIDDLEWARE = [
     'django.middleware.locale.LocaleMiddleware',
     'django-simple-csp.middleware.csp.CSPMiddleware',
     'pipeline.middleware.MinifyHTMLMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 STATICFILES_FINDERS = [
