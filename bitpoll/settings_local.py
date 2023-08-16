@@ -9,7 +9,7 @@ SECRET_KEY = '...'
 FIELD_ENCRYPTION_KEY = "this+is+an+example+key+please+generate+one+="
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ## If Bitpoll is served via HTTPS enable the next two options
 #SESSION_COOKIE_SECURE = True
