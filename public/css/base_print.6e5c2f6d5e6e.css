@@ -1,0 +1,54 @@
+.navbar, .nav {
+    display: none !important;
+}
+
+* {
+    background: none !important;
+    color: black !important;
+    text-shadow: none !important;
+}
+
+footer,
+.noprint {
+    display: none !important;
+}
+
+table, table th, table td, table.poll td, table.poll th, table.poll tr, table.poll, table.poll td.none{
+    border: 1px solid black !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+}
+
+.container {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+td {
+    text-align: center;
+}
+
+.choice-sum, .author {
+    white-space: nowrap;
+}
+
+.choice-sum {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+th {
+    background-color: lightgrey !important;
+}
+
+.poll .choice-sum.maximum {
+    font-weight: bold !important;
+}
+
+table.poll td.none {
+    visibility: hidden;
+}
+
+.table-scroll-x, .table-noscroll-y{
+    overflow-x: visible !important;
+}
