@@ -14,12 +14,6 @@
       }
     }
     ],
-    
-  "rewrites": [
-    { "source": "/static/(.*)", "destination": "/static/$1" },
-    { "source": "/(.*)", "destination": "/bitpoll/$1" }
-  ]
-,
     "routes": [
        {
       "src": "/static/(.*)",
