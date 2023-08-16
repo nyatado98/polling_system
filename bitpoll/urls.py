@@ -66,6 +66,9 @@ if url_prefix not in ('', '/', None):
     urlpatterns = [
         path(url_prefix, include(urlpatterns))
     ]
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 
 
 def handler500(request):
