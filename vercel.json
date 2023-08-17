@@ -15,7 +15,10 @@
     }
     ],
     "routes": [
-    
+       {
+      "src": "/(.*)",
+      "dest": "/$1"
+    },
       {
         "src": "/(.*)",
         "dest": "bitpoll/wsgi.py"
