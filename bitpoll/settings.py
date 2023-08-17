@@ -23,7 +23,7 @@ ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = os.path.join(ROOT_DIR, 'public/_media')
+MEDIA_ROOT = os.path.join(ROOT_DIR, '_media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -40,7 +40,7 @@ MEDIA_URL = '/media/'
 
 # ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
 
 # settings.py
 
@@ -48,7 +48,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-# STATIC_URL = '/'
+STATIC_URL = '/bitpoll/'
 
 ALLOWED_HOSTS = ['*']
 
