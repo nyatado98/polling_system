@@ -40,7 +40,7 @@ MEDIA_URL = '/media/'
 
 # ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # settings.py
 
@@ -48,7 +48,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/staticfiles/'
+STATIC_URL = '/static/'
 
 ALLOWED_HOSTS = ['*']
 
