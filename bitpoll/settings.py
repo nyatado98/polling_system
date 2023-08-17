@@ -48,7 +48,7 @@ STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = 
+STATIC_URL = "/static/"
 
 ALLOWED_HOSTS = ['*']
 
@@ -112,18 +112,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django-simple-csp.middleware.csp.CSPMiddleware',
-    'pipeline.middleware.MinifyHTMLMiddleware',
+    # 'pipeline.middleware.MinifyHTMLMiddleware',
     
 ]
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'pipeline.finders.PipelineFinder',
+    # 'pipeline.finders.PipelineFinder',
     # 'whitenoise.finders.WhiteNoiseFinder',
 ]
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
+# STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
 
 PIPELINE = {
     'STYLESHEETS': {
