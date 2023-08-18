@@ -313,6 +313,6 @@
 {% endblock %}
 
 {% block additionalJS %}
-    {% javascript 'create_poll' %}
+    
     <script nonce="{% csp_js_nonce %}">$.datetimepicker.setLocale('{{ request.LANGUAGE_CODE }}');</script>
 {% endblock %}
