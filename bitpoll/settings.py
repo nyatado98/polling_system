@@ -40,7 +40,6 @@ os.path.join(BASE_DIR, 'static'),
 
 ]
 
-DEBUG = True
 STATIC_ROOT = os.path.join(BASE_DIR,'static', 'static')
 
 # settings.py
@@ -113,18 +112,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django-simple-csp.middleware.csp.CSPMiddleware',
-    # 'pipeline.middleware.MinifyHTMLMiddleware',
+    'pipeline.middleware.MinifyHTMLMiddleware',
     
 ]
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    # 'pipeline.finders.PipelineFinder',
+    'pipeline.finders.PipelineFinder',
     # 'whitenoise.finders.WhiteNoiseFinder',
 ]
 
-# STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
 
 PIPELINE = {
     'STYLESHEETS': {
