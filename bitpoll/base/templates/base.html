@@ -135,8 +135,7 @@
         </div>
     </footer>
 </div>
-    {% javascript 'base_late' %}
-{% comment %}
+    {% comment %}
     <script src="{% static 'coffee/votefilter.coffee'|compile %}"  type="text/javascript" ></script>
 {% endcomment %}
     <script nonce="{% csp_js_nonce %}">moment.locale("{{ request.LANGUAGE_CODE }}")</script>
