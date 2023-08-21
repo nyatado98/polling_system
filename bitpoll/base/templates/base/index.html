@@ -280,7 +280,7 @@
 
 {% block additionalJS %}
    
-<link rel="stylesheet" type="text/css" href="{% static 'js/index.js' %}">
+<script src="{% static 'js/index.js' %}" type="text/javascript" ></script>
 
     <script nonce="{% csp_js_nonce %}">$.datetimepicker.setLocale('{{ request.LANGUAGE_CODE }}');</script>
 {% endblock %}
