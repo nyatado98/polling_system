@@ -219,7 +219,7 @@ PIPELINE = {
     'JS_COMPRESSOR': 'pipeline.compressors.NoopCompressor',  # TODO
 }
 
-PIPELINE_ENABLED = False  # todo uglfyer mal ansehen
+PIPELINE_ENABLED = True  # todo uglfyer mal ansehen
 
 ROOT_URLCONF = 'bitpoll.urls'
 
