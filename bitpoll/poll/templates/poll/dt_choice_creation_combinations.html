@@ -11,6 +11,7 @@
 
 {% block content %}
     {% include "poll/poll_header.html" %}
+    {% load static %}
     <div class="container">
     {% include  "poll/dt_choice_header.html" %}
     <div class="alert alert-info">
@@ -86,5 +87,5 @@
 
 
 {% block additionalJS %}
-    {% javascript 'poll_edit' %}
+        <script src="{% static 'js/poll_edit.js' %}" type="text/javascript" ></script>
 {% endblock %}
