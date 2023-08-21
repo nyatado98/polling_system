@@ -279,6 +279,8 @@
 {% endblock %}
 
 {% block additionalJS %}
-    {% javascript 'create_poll' %}
+   
+<link rel="stylesheet" type="text/css" href="{% static 'js/index.js' %}">
+
     <script nonce="{% csp_js_nonce %}">$.datetimepicker.setLocale('{{ request.LANGUAGE_CODE }}');</script>
 {% endblock %}
