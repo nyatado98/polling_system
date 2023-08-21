@@ -29,10 +29,22 @@
   
    {% load static %}
 
-{% stylesheet 'base' %}
-{% stylesheet 'base_screen' %}
-{% stylesheet 'base_print' %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.css' %}">
 
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery.datetimepicker.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/print.css' %}">
+
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'scss/_all.css' %}"> -->
+<link rel="stylesheet" type="text/css" href="{% static 'scss/action.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'scss/form.css' %}">
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'scss/iconpreview.css' %}"> -->
+<link rel="stylesheet" type="text/css" href="{% static 'scss/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'scss/poll.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/slider.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/timeinput.css' %}">
 
 
 </head>
@@ -113,6 +125,7 @@
         </div>
     </footer>
 </div>
+{% stylesheet 'base' %}
     {% comment %}
     <script src="{% static 'coffee/votefilter.coffee'|compile %}"  type="text/javascript" ></script>
 {% endcomment %}
@@ -121,3 +134,4 @@
     {% endblock %}
 </body>
 </html>
+
