@@ -36,7 +36,7 @@ MEDIA_URL = '/media/'
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
 STATICFILES_DIRS = [
-os.path.join(ROOT_DIR, '_static'),
+os.path.join(BASE_DIR, 'static'),
 
 ]
 
@@ -44,7 +44,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static', 'static')
 
 # settings.py
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -103,7 +103,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -112,18 +112,18 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django-simple-csp.middleware.csp.CSPMiddleware',
-    # 'pipeline.middleware.MinifyHTMLMiddleware',
+    'pipeline.middleware.MinifyHTMLMiddleware',
     
 ]
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    # 'pipeline.finders.PipelineFinder',
+    'pipeline.finders.PipelineFinder',
     # 'whitenoise.finders.WhiteNoiseFinder',
 ]
 
-# STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
 
 PIPELINE = {
     'STYLESHEETS': {
